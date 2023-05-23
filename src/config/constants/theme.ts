@@ -1,0 +1,11 @@
+const PRIMARY_COLOR = '#2EB6CC';
+const SECONDARY_COLOR = '#092429';
+const WHITE_COLOR = '#FFFFFF';
+const BLACK_COLOR = '#000000';
+
+export default {
+  PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  WHITE_COLOR,
+  BLACK_COLOR,
+};
