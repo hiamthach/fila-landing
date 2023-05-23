@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2EB6CC',
-        secondary: '#092429',
+        'primary': '#2EB6CC',
+        'secondary': '#092429',
+        'text-body': '#323C52',
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],

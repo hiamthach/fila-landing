@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="h-[60px] w-full flex items-center justify-center sticky top-0 left-0 bg-secondary gap-[50px]">
+    <header className="h-[60px] w-full flex items-center justify-center sticky top-0 left-0 bg-secondary gap-[50px]">
       {[
         ['Trang chủ', '/'],
         ['Về chúng tôi', '#about'],
@@ -13,7 +13,7 @@ const Header = () => {
           {label}
         </a>
       ))}
-    </div>
+    </header>
   );
 };
 

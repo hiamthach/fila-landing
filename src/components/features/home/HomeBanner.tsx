@@ -1,6 +1,6 @@
 const HomeBanner = () => {
   return (
-    <div
+    <section
       className="w-full text-white bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center bg-home-banner"
       style={{
         height: 'calc(100vh - 60px)',
@@ -15,7 +15,7 @@ const HomeBanner = () => {
       <button className="outline-none border-none rounded-[28px] bg-white text-black font-bold w-[180px] h-14">
         Contact us
       </button>
-    </div>
+    </section>
   );
 };
 
