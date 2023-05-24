@@ -27,8 +27,9 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         components: {
           Button: {
             defaultProps: {
-              radius: 10,
+              radius: 16,
               fw: 'normal',
+              variant: 'filled',
             },
           },
         },

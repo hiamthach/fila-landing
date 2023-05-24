@@ -10,6 +10,28 @@ const generateLoremIpsum = (paragraphs: number) => {
   return result.trim();
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const scrollToSection = (event: any) => {
+  event.preventDefault();
+
+  const targetElementId = (event.target as HTMLAnchorElement).getAttribute(
+    'href'
+  );
+  const offset = 100;
+
+  if (targetElementId) {
+    const targetElement = document.querySelector<HTMLElement>(targetElementId);
+    if (targetElement) {
+      const targetPosition = targetElement.offsetTop - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+    }
+  }
+};
+
 export default {
   generateLoremIpsum,
+  scrollToSection,
 };

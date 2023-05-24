@@ -1,3 +1,59 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import partner1 from '@/assets/imgs/partner1.png';
+import partner2 from '@/assets/imgs/partner2.png';
+import partner3 from '@/assets/imgs/partner3.png';
+import partner4 from '@/assets/imgs/partner4.png';
+import partner5 from '@/assets/imgs/partner5.png';
+
+const listPartner = [
+  {
+    img: partner1,
+  },
+  {
+    img: partner2,
+  },
+  {
+    img: partner3,
+  },
+  {
+    img: partner4,
+  },
+  {
+    img: partner5,
+  },
+  {
+    img: partner1,
+  },
+  {
+    img: partner2,
+  },
+  {
+    img: partner3,
+  },
+  {
+    img: partner4,
+  },
+  {
+    img: partner5,
+  },
+  {
+    img: partner1,
+  },
+  {
+    img: partner2,
+  },
+  {
+    img: partner3,
+  },
+  {
+    img: partner4,
+  },
+  {
+    img: partner5,
+  },
+];
+
 const HomeAboutUs = () => {
   return (
     <section id="about">
@@ -33,6 +89,22 @@ const HomeAboutUs = () => {
             thu nhập cố định, cổ phần tư nhân, công nghệ, bất động sản và năng
             lượng sạch.
           </p>
+        </div>
+      </div>
+
+      <div className="w-full bg-primary py-[50px]">
+        <div className="container">
+          <h4 className="text-2xl font-bold text-center text-white mb-6">
+            Được hơn 40.000 cá nhân và công ty tin cậy
+          </h4>
+
+          <Swiper spaceBetween={30} slidesPerView={6} loop autoplay={true}>
+            {listPartner.map((item, index) => (
+              <SwiperSlide key={index}>
+                <img src={item.img} className="w-fit h-auto" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

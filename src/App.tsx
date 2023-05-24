@@ -6,6 +6,9 @@ import CustomRouter from './config/routes/CustomRouter';
 
 import NotFoundPage from './pages/NotFoundPage';
 import MainLayout from './components/layout/MainLayout';
+import './styles/index.css';
+
+import 'swiper/css';
 
 function App() {
   const renderRouter = (routes: RouteProps[]) => {

@@ -8,11 +8,15 @@ export default {
         'secondary': '#092429',
         'text-body': '#323C52',
       },
+      backgroundColor: {
+        light: '#D5F0F5',
+      },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
       backgroundImage: {
         'home-banner': "url('/src/assets/imgs/banner.png')",
+        'footer': "url('/src/assets/imgs/footer-bg.png')",
       },
       container: {
         center: true,
@@ -20,6 +24,9 @@ export default {
         maxWidth: '930px',
       },
     },
+  },
+  corePlugins: {
+    preflight: false,
   },
   plugins: [],
 };
