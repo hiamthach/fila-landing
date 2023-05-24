@@ -7,6 +7,8 @@ export default {
         'primary': '#2EB6CC',
         'secondary': '#092429',
         'text-body': '#323C52',
+        'grey': '#6f6f6f',
+        'divider': '#1C6D7A',
       },
       backgroundColor: {
         light: '#D5F0F5',
@@ -22,6 +24,12 @@ export default {
         center: true,
         padding: '1rem',
         maxWidth: '930px',
+      },
+      boxShadow: {
+        default: '0px 6.7863px 20.3589px rgba(151,151,151,0.2)',
+      },
+      lineHeight: {
+        1: '1.0',
       },
     },
   },

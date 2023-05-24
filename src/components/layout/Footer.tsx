@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="my-[30px] bg-[#1C6D7A] w-full h-[1px] opacity-25"></div>
+      <div className="my-[30px] bg-divider w-full h-[1px] opacity-25"></div>
 
       <div className="container">
         <div className="flex w-full gap-[50px]">

@@ -8,6 +8,13 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -16,4 +23,13 @@ body {
   .container {
     @apply mx-auto px-4 lg:px-0 w-full max-w-[930px];
   }
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    269.96deg,
+    rgba(46, 182, 204, 0.08) 0.03%,
+    rgba(213, 240, 245, 0) 99.96%
+  );
+  border-radius: 11.1944px;
 }

@@ -140,7 +140,7 @@ const HomeAboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full bg-[#1C6D7A] h-[1px] opacity-25 my-4 "></div>
+            <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
             <div className="flex gap-5 items-center">
               <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
                 <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
@@ -155,7 +155,7 @@ const HomeAboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full bg-[#1C6D7A] h-[1px] opacity-25 my-4 "></div>
+            <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
             <div className="flex gap-5 items-center">
               <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
                 <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
@@ -173,7 +173,7 @@ const HomeAboutUs = () => {
           </div>
 
           <div className="relative flex-1 flex items-center justify-center">
-            <div className="bg-white px-9 py-12 w-fit h-fit text-center shadow-[0px_6.7863px_20.3589px_rgba(151,151,151,0.2)] z-30 rounded-[5px]">
+            <div className="bg-white px-9 py-12 w-fit h-fit text-center shadow-default z-30 rounded-[5px]">
               <h4 className="text-primary text-8xl font-extrabold m-0 mb-3">
                 <CountUp start={0} end={12} duration={8} />
               </h4>
