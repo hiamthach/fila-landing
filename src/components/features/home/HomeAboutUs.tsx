@@ -1,10 +1,18 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import CountUp from 'react-countup';
 
 import partner1 from '@/assets/imgs/partner1.png';
 import partner2 from '@/assets/imgs/partner2.png';
 import partner3 from '@/assets/imgs/partner3.png';
 import partner4 from '@/assets/imgs/partner4.png';
 import partner5 from '@/assets/imgs/partner5.png';
+
+import globeVector from '@/assets/imgs/globe-vector.svg';
+import mapBg from '@/assets/imgs/map-bg.svg';
+
+import helpers from '@/config/helpers/general';
+
+const { generateImgPicsum } = helpers;
 
 const listPartner = [
   {
@@ -105,6 +113,111 @@ const HomeAboutUs = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+      </div>
+
+      <div className="container my-[150px]">
+        <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
+          tại sao chọn chúng tôi
+        </h4>
+        <h5 className="m-0 mb-[30px] text-secondary font-bold text-[26px] leading-8  max-w-[60%]">
+          Hơn 50 triệu khách hàng đã hài lòng về chúng tôi
+        </h5>
+
+        <div className="flex gap-4">
+          <div className="flex-1">
+            <div className="flex gap-5 items-center">
+              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+              </div>
+              <div className="flex-1">
+                <h6 className="m-0 text-secondary text-base font-semibold">
+                  Hỗ trợ khách hàng toàn cầu
+                </h6>
+                <p className="m-0 text-secondary text-sm font-normal mt-2">
+                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
+                  aliquam egestas lorem sem.
+                </p>
+              </div>
+            </div>
+            <div className="w-full bg-[#1C6D7A] h-[1px] opacity-25 my-4 "></div>
+            <div className="flex gap-5 items-center">
+              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+              </div>
+              <div className="flex-1">
+                <h6 className="m-0 text-secondary text-base font-semibold">
+                  Hơn 300 nhân viên có kinh nghiệm cao
+                </h6>
+                <p className="m-0 text-secondary text-sm font-normal mt-2">
+                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
+                  aliquam egestas lorem sem.
+                </p>
+              </div>
+            </div>
+            <div className="w-full bg-[#1C6D7A] h-[1px] opacity-25 my-4 "></div>
+            <div className="flex gap-5 items-center">
+              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+              </div>
+              <div className="flex-1">
+                <h6 className="m-0 text-secondary text-base font-semibold">
+                  Hơn 300 nhân viên có kinh nghiệm cao
+                </h6>
+                <p className="m-0 text-secondary text-sm font-normal mt-2">
+                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
+                  aliquam egestas lorem sem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative flex-1 flex items-center justify-center">
+            <div className="bg-white px-9 py-12 w-fit h-fit text-center shadow-[0px_6.7863px_20.3589px_rgba(151,151,151,0.2)] z-30 rounded-[5px]">
+              <h4 className="text-primary text-8xl font-extrabold m-0 mb-3">
+                <CountUp start={0} end={12} duration={8} />
+              </h4>
+              <p className="text-secondary text-[11px] font-semibold m-0">
+                Year's experience working
+              </p>
+            </div>
+
+            <img
+              src={mapBg}
+              alt=""
+              className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+
+            <img
+              src={generateImgPicsum(84, 63)}
+              alt=""
+              className="w-[84px] h-[63px] object-cover object-center z-10 right-[16%] top-0 absolute rounded-md"
+            />
+
+            <img
+              src={generateImgPicsum(152, 101)}
+              alt=""
+              className="w-[152px] h-[101px] object-cover object-center z-10 left-[12%] top-[6%] absolute rounded-md"
+            />
+
+            <img
+              src={generateImgPicsum(136, 92)}
+              alt=""
+              className="w-[136px] h-[92px] object-cover object-center z-10 left-[4%] bottom-[6%] absolute rounded-md"
+            />
+
+            <img
+              src={generateImgPicsum(136, 92)}
+              alt=""
+              className="w-[136px] h-[92px] object-cover object-center z-10 right-[10%] top-[46%] absolute rounded-md"
+            />
+
+            <img
+              src={generateImgPicsum(127, 84)}
+              alt=""
+              className="w-[127px] h-[84px] object-cover object-center left-[42%] bottom-0 absolute rounded-md z-50"
+            />
+          </div>
         </div>
       </div>
     </section>

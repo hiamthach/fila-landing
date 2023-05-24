@@ -15,14 +15,14 @@ const Footer = () => {
     <footer className="w-full py-7 bg-footer text-white">
       <div className="container">
         <div className="flex flex-row w-full gap-10 items-stretch justify-stretch">
-          <div className="w-fit max-w-[27%] h-full self-stretch">
+          <div className="w-fit max-w-[27%] h-full self-stretch min-h-[325px] flex flex-col">
             <Logo />
             <p className="text-sm mt-9">
               Lorem ipsum dolor sit amet consectetur. Purus tincidunt viverra
               est adipiscing tortor nunc ipsum ut fusce.
             </p>
 
-            <div className="mt-auto flex gap-2 text-sm font-medium">
+            <div className="mt-auto flex gap-2 text-sm font-medium justify-self-end mb-2">
               <IconClock size={20} className="text-primary" />
               <span>Mon-Sat</span>
               <span>10.00am-6.00pm</span>

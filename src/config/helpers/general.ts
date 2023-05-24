@@ -31,7 +31,12 @@ const scrollToSection = (event: any) => {
   }
 };
 
+const generateImgPicsum = (width: number, height: number) => {
+  return `https://picsum.photos/${width}/${height}`;
+};
+
 export default {
   generateLoremIpsum,
   scrollToSection,
+  generateImgPicsum,
 };

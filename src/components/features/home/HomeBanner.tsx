@@ -12,7 +12,7 @@ const HomeBanner = () => {
         lorem lorem pharetra velit.
       </p>
 
-      <button className="outline-none border-none rounded-[28px] bg-white text-black font-bold w-[180px] h-14">
+      <button className="font-sans outline-none border-none rounded-[28px] bg-white text-black font-bold w-[180px] h-14">
         Contact us
       </button>
     </section>
