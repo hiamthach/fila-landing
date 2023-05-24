@@ -1,4 +1,6 @@
+import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import CountUp from 'react-countup';
 
 import partner1 from '@/assets/imgs/partner1.png';
@@ -106,7 +108,17 @@ const HomeAboutUs = () => {
             Được hơn 40.000 cá nhân và công ty tin cậy
           </h4>
 
-          <Swiper spaceBetween={30} slidesPerView={6} loop autoplay={true}>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={6}
+            loop
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+          >
             {listPartner.map((item, index) => (
               <SwiperSlide key={index}>
                 <img src={item.img} className="w-fit h-auto" />
