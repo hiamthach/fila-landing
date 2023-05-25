@@ -1,7 +1,11 @@
+import { useRef } from 'react';
+
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
+
+import { useCountUp } from 'react-countup';
 
 import partner1 from '@/assets/imgs/partner1.png';
 import partner2 from '@/assets/imgs/partner2.png';
@@ -67,8 +71,16 @@ const listPartner = [
 ];
 
 const HomeAboutUs = () => {
+  const countUpRef = useRef(null);
+  const { start } = useCountUp({
+    ref: countUpRef,
+    start: 1,
+    end: 12,
+    duration: 6.5,
+  });
+
   return (
-    <section id="about">
+    <>
       <div className="w-full bg-primary py-4">
         <div className="container">
           <h2 className="text-white text-[32px] leading-10 font-bold">
@@ -83,13 +95,25 @@ const HomeAboutUs = () => {
         </h6>
 
         <div className="flex gap-8 md:gap-12 items-center flex-col md:flex-row">
-          <p className="text-xl leading-10 font-bold w-full md:max-w-[42%]">
+          <motion.p
+            initial={{ opacity: 0, translateY: -50 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-xl leading-8 font-bold w-full md:max-w-[42%]"
+          >
             Với tư cách là nhà quản lý đầu tư đa lĩnh vực duy nhất của Việt Nam,
             chúng tôi có vị thế đặc biệt để tạo giá trị và chia sẻ các cơ hội và
             lợi ích từ sự phát triển của đất nước trên các loại tài sản.
-          </p>
+          </motion.p>
 
-          <p className="text-text-body text-sm flex-1">
+          <motion.p
+            initial={{ opacity: 0, translateY: -50 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-text-body text-sm flex-1"
+          >
             Sứ mệnh của VinaCapital là giúp nhà đầu tư khám phá các cơ hội đầu
             tư tốt nhất tại Việt Nam bằng cách tận dụng các mối quan hệ sâu
             rộng, kiến thức đầu tư, khả năng phân tích và chuyên môn tài chính
@@ -100,7 +124,7 @@ const HomeAboutUs = () => {
             loại tài sản truyền thống và thay thế, bao gồm cổ phiếu, tài sản có
             thu nhập cố định, cổ phần tư nhân, công nghệ, bất động sản và năng
             lượng sạch.
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -145,70 +169,114 @@ const HomeAboutUs = () => {
       </div>
 
       <div className="container section-margin">
-        <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
+        <motion.h4
+          initial={{ opacity: 0, translateY: -50 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="m-0 mb-[10px] uppercase text-primary font-bold"
+        >
           tại sao chọn chúng tôi
-        </h4>
-        <h5 className="m-0 mb-[30px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]">
+        </motion.h4>
+        <motion.h5
+          initial={{ opacity: 0, translateY: -50 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="m-0 mb-[30px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]"
+        >
           Hơn 50 triệu khách hàng đã hài lòng về chúng tôi
-        </h5>
+        </motion.h5>
 
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
-            <div className="flex gap-5 items-center">
-              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
-                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+            <motion.div
+              initial={{ opacity: 0, translateY: -50 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex gap-5 items-center">
+                <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                  <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+                </div>
+                <div className="flex-1">
+                  <h6 className="m-0 text-secondary text-base font-semibold">
+                    Hỗ trợ khách hàng toàn cầu
+                  </h6>
+                  <p className="m-0 text-secondary text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
+                    massa aliquam egestas lorem sem.
+                  </p>
+                </div>
               </div>
-              <div className="flex-1">
-                <h6 className="m-0 text-secondary text-base font-semibold">
-                  Hỗ trợ khách hàng toàn cầu
-                </h6>
-                <p className="m-0 text-secondary text-sm font-normal mt-2">
-                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
-                  aliquam egestas lorem sem.
-                </p>
+              <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, translateY: -50 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.33 }}
+            >
+              <div className="flex gap-5 items-center">
+                <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                  <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+                </div>
+                <div className="flex-1">
+                  <h6 className="m-0 text-secondary text-base font-semibold">
+                    Hơn 300 nhân viên có kinh nghiệm cao
+                  </h6>
+                  <p className="m-0 text-secondary text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
+                    massa aliquam egestas lorem sem.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
-            <div className="flex gap-5 items-center">
-              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
-                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+              <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, translateY: -50 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.36 }}
+            >
+              <div className="flex gap-5 items-center">
+                <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
+                  <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
+                </div>
+                <div className="flex-1">
+                  <h6 className="m-0 text-secondary text-base font-semibold">
+                    Hơn 300 nhân viên có kinh nghiệm cao
+                  </h6>
+                  <p className="m-0 text-secondary text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
+                    massa aliquam egestas lorem sem.
+                  </p>
+                </div>
               </div>
-              <div className="flex-1">
-                <h6 className="m-0 text-secondary text-base font-semibold">
-                  Hơn 300 nhân viên có kinh nghiệm cao
-                </h6>
-                <p className="m-0 text-secondary text-sm font-normal mt-2">
-                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
-                  aliquam egestas lorem sem.
-                </p>
-              </div>
-            </div>
-            <div className="w-full bg-divider h-[1px] opacity-25 my-4 "></div>
-            <div className="flex gap-5 items-center">
-              <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
-                <img src={globeVector} alt="" className="w-12 h-auto mt-1" />
-              </div>
-              <div className="flex-1">
-                <h6 className="m-0 text-secondary text-base font-semibold">
-                  Hơn 300 nhân viên có kinh nghiệm cao
-                </h6>
-                <p className="m-0 text-secondary text-sm font-normal mt-2">
-                  Lorem ipsum dolor sit amet consectetur. Augue vestibulum massa
-                  aliquam egestas lorem sem.
-                </p>
-              </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="relative flex-1 flex items-center justify-center min-h-[360px]">
-            <div className="bg-white px-9 py-12 w-fit h-fit text-center shadow-default z-30 rounded-[5px]">
-              <h4 className="text-primary text-8xl font-extrabold m-0 mb-3">
-                <CountUp start={0} end={12} duration={8} />
-              </h4>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2 }}
+              onAnimationStart={() => {
+                start();
+              }}
+              className="bg-white px-9 py-12 w-fit h-fit text-center shadow-default z-30 rounded-[5px]"
+            >
+              <h4
+                ref={countUpRef}
+                className="text-primary text-8xl font-extrabold m-0 mb-3"
+              ></h4>
               <p className="text-secondary text-[11px] font-semibold m-0">
                 Year's experience working
               </p>
-            </div>
+            </motion.div>
 
             <img
               src={mapBg}
@@ -216,31 +284,51 @@ const HomeAboutUs = () => {
               className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               src={map3Img}
               alt=""
               className="w-[84px] h-[63px] object-cover object-center z-10 right-[16%] top-0 absolute rounded-md"
             />
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45 }}
               src={map2Img}
               alt=""
               className="w-[152px] h-[101px] object-cover object-center z-10 left-[12%] top-[6%] absolute rounded-md"
             />
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               src={map1Img}
               alt=""
               className="w-[136px] h-[92px] object-cover object-center z-10 left-[4%] bottom-[6%] absolute rounded-md"
             />
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
               src={map4Img}
               alt=""
               className="w-[136px] h-[92px] object-cover object-center z-10 right-[10%] top-[46%] absolute rounded-md"
             />
 
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
               src={map5Img}
               alt=""
               className="w-[127px] h-[84px] object-cover object-center left-[42%] bottom-0 absolute rounded-md z-50"
@@ -248,7 +336,7 @@ const HomeAboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

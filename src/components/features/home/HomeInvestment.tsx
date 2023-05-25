@@ -5,6 +5,8 @@ import { IconArrowRight } from '@tabler/icons-react';
 
 import investmentImg1 from '@/assets/imgs/investment-1.png';
 
+import { motion } from 'framer-motion';
+
 const HomeInvestment = () => {
   const [activeTag, setActiveTag] = useState('all');
 
@@ -28,16 +30,32 @@ const HomeInvestment = () => {
       <div className="container">
         <div className="flex gap-8 items-end flex-wrap">
           <div className="flex-1">
-            <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
+            <motion.h4
+              initial={{ opacity: 0, translateY: -50 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="m-0 mb-[10px] uppercase text-primary font-bold"
+            >
               Xem chúng tôi làm gì
-            </h4>
-            <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]">
+            </motion.h4>
+            <motion.h5
+              initial={{ opacity: 0, translateY: -30 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]"
+            >
               Trường hợp tư vấn
-            </h5>
+            </motion.h5>
 
             <div className="flex gap-2 md:gap-10">
-              {listTag.map((tag) => (
-                <span
+              {listTag.map((tag, index) => (
+                <motion.span
+                  initial={{ opacity: 0, translateY: -(50 + index * 10) }}
+                  whileInView={{ opacity: 1, translateY: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
                   key={tag.name}
                   className={clsx(
                     'text-base cursor-pointer',
@@ -46,24 +64,40 @@ const HomeInvestment = () => {
                   onClick={() => setActiveTag(tag.name)}
                 >
                   {tag.label}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
 
-          <button className="bg-[#ACE2EB] rounded-md outline-none border-none py-4 px-7 font-sans text-base font-semibold">
+          <motion.button
+            initial={{ opacity: 0, translateY: -100 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-[#ACE2EB] rounded-md outline-none border-none py-4 px-7 font-sans text-base font-semibold"
+          >
             Xem tất cả
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-[30px]">
-        <img
+        <motion.img
+          initial={{ opacity: 0, translateY: 100 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           src={investmentImg1}
           alt=""
           className="min-h-[400px] h-full w-full object-cover object-center"
         />
 
-        <div className="py-8 px-6 bg-light">
+        <motion.div
+          initial={{ opacity: 0, translateY: 110 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.64 }}
+          className="py-8 px-6 bg-light"
+        >
           <h6 className="text-lg text-secondary font-bold mb-2">
             Quản trị rủi ro
           </h6>
@@ -89,13 +123,23 @@ const HomeInvestment = () => {
           <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-secondary">
             <IconArrowRight size={20} />
           </div>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, translateY: 130 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
           src={investmentImg1}
           alt=""
           className="min-h-[400px] h-full w-full object-cover object-center"
         />
-        <div className="py-8 px-6 bg-light">
+        <motion.div
+          initial={{ opacity: 0, translateY: 140 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.72 }}
+          className="py-8 px-6 bg-light"
+        >
           <h6 className="text-lg text-secondary font-bold mb-2">
             Quản trị rủi ro
           </h6>
@@ -121,8 +165,14 @@ const HomeInvestment = () => {
           <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-secondary">
             <IconArrowRight size={20} />
           </div>
-        </div>
-        <div className="py-8 px-6 bg-light">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateY: 100 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="py-8 px-6 bg-light"
+        >
           <h6 className="text-lg text-secondary font-bold mb-2">
             Quản trị rủi ro
           </h6>
@@ -148,14 +198,24 @@ const HomeInvestment = () => {
           <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-secondary">
             <IconArrowRight size={20} />
           </div>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, translateY: 110 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.64 }}
           src={investmentImg1}
           alt=""
           className="min-h-[400px] h-full w-full object-cover object-center"
         />
 
-        <div className="py-8 px-6 bg-light">
+        <motion.div
+          initial={{ opacity: 0, translateY: 130 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="py-8 px-6 bg-light"
+        >
           <h6 className="text-lg text-secondary font-bold mb-2">
             Quản trị rủi ro
           </h6>
@@ -181,8 +241,12 @@ const HomeInvestment = () => {
           <div className="w-10 h-10 rounded-full flex items-center justify-center text-white bg-secondary">
             <IconArrowRight size={20} />
           </div>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
+          initial={{ opacity: 0, translateY: 140 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.72 }}
           src={investmentImg1}
           alt=""
           className="min-h-[400px] h-full w-full object-cover object-center"

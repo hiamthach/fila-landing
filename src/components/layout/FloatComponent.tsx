@@ -4,13 +4,21 @@ import messageIcon from '@/assets/icons/message-icons.svg';
 import qrIcon from '@/assets/icons/qr.svg';
 import { IconDownload, IconX } from '@tabler/icons-react';
 
+import { motion } from 'framer-motion';
+
 const FloatComponent = () => {
   const [isShow, setIsShow] = useState(true);
 
   return (
     <div className="flex flex-col gap-5 items-end">
       {isShow && (
-        <div className="relative border-1 border-solid border-primary rounded-[10px] px-5 pt-3 pb-5 bg-white">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.4, translateY: 100 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative border-1 border-solid border-primary rounded-[10px] px-5 pt-3 pb-5 bg-white"
+        >
           <h5 className="text-lg m-0 italic font-bold">Tải ngay FiLA</h5>
           <div className="w-full h-[3px] bg-primary rounded mb-[30px]"></div>
           <div className="flex gap-5 items-center">
@@ -26,11 +34,17 @@ const FloatComponent = () => {
           >
             <IconX size={18} />
           </div>
-        </div>
+        </motion.div>
       )}
-      <div className="hover:shadow-default cursor-pointer aspect-square w-12 md:w-16 bg-primary flex items-center justify-center rounded-full">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.6 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="hover:shadow-default cursor-pointer aspect-square w-12 md:w-16 bg-primary flex items-center justify-center rounded-full"
+      >
         <img src={messageIcon} alt="message" className="w-6 md:w-8 h-auto" />
-      </div>
+      </motion.div>
     </div>
   );
 };

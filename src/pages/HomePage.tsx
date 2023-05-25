@@ -31,7 +31,9 @@ const HomePage = () => {
   return (
     <div>
       <HomeBanner />
-      <HomeAboutUs />
+      <section id="about">
+        <HomeAboutUs />
+      </section>
       <HomeServices />
       <HomeInvestment />
       <HomeAnalysis />

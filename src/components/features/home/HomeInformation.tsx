@@ -4,6 +4,8 @@ import { IconPlus } from '@tabler/icons-react';
 
 import helpers from '@/config/helpers/general';
 
+import { motion } from 'framer-motion';
+
 const { generateLoremIpsum } = helpers;
 
 const HomeInformation = () => {
@@ -48,7 +50,13 @@ const HomeInformation = () => {
   ];
   return (
     <>
-      <section className="container section-margin">
+      <motion.section
+        initial={{ opacity: 0.4 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="container section-margin"
+      >
         <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
           Thông tin & Phân tích
         </h4>
@@ -82,9 +90,16 @@ const HomeInformation = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </motion.section>
 
-      <section id="faq" className="container section-margin">
+      <motion.section
+        initial={{ opacity: 0.4 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        id="faq"
+        className="container section-margin"
+      >
         <h3 className="text-center mx-auto text-[32px] font-bold leading-10 mb-[50px]">
           FAQs
         </h3>
@@ -130,7 +145,7 @@ const HomeInformation = () => {
             <Accordion.Panel>{generateLoremIpsum(1)}</Accordion.Panel>
           </Accordion.Item>
         </Accordion>
-      </section>
+      </motion.section>
     </>
   );
 };

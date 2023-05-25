@@ -1,16 +1,20 @@
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { Popover, Blockquote } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import bgImg from '@/assets/imgs/testimonials/background.svg';
 import person1 from '@/assets/imgs/testimonials/person1.jpg';
 import person2 from '@/assets/imgs/testimonials/person2.jpg';
 import person3 from '@/assets/imgs/testimonials/person3.jpg';
-import person4 from '@/assets/imgs/testimonials/person4.jpg';
+import person4 from '@/assets/imgs/testimonials/person4.png';
 import person5 from '@/assets/imgs/testimonials/person5.jpg';
 import person6 from '@/assets/imgs/testimonials/person6.jpg';
 import person7 from '@/assets/imgs/testimonials/person7.jpg';
 
-import { IconStarFilled } from '@tabler/icons-react';
+import { IconStarFilled, IconQuote } from '@tabler/icons-react';
+
+import { motion } from 'framer-motion';
 
 interface IContent {
   avatar: string;
@@ -27,20 +31,40 @@ const TestimonialAvatar = ({
   content: IContent;
   size: number;
 }) => {
+  const [opened, { close, open }] = useDisclosure(false);
   return (
-    <div
-      className="rounded-full"
-      style={{
-        height: size,
-        width: size,
-      }}
-    >
-      <img
-        src={content.avatar}
-        alt=""
-        className="w-full h-full object-cover object-center rounded-full"
-      />
-    </div>
+    <Popover width={'300'} position="top" shadow="md" opened={opened}>
+      <Popover.Target>
+        <div
+          className="rounded-full"
+          style={{
+            height: size,
+            width: size,
+          }}
+          onMouseEnter={open}
+          onMouseLeave={close}
+        >
+          <img
+            src={content.avatar}
+            alt=""
+            className="w-full h-full object-cover object-center rounded-full"
+          />
+        </div>
+      </Popover.Target>
+
+      <Popover.Dropdown>
+        <div className="text-center">
+          <IconQuote size={32} className="text-primary" />
+          <p className="text-sm text-center italic text-grey">
+            {content.content}
+          </p>
+          <h5 className="text-secondary text-base mt-2 font-semibold text-center">
+            {content.name}
+          </h5>
+          <h6 className="text-sm font-normal">{content.position}</h6>
+        </div>
+      </Popover.Dropdown>
+    </Popover>
   );
 };
 
@@ -106,12 +130,24 @@ const HomeTestimonial = () => {
 
   return (
     <section className="container mb-52 md:mb-[300px] text-center">
-      <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
+      <motion.h4
+        initial={{ opacity: 0, translateY: -50 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="m-0 mb-[10px] uppercase text-primary font-bold"
+      >
         đánh giá
-      </h4>
-      <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%] mx-auto">
+      </motion.h4>
+      <motion.h5
+        initial={{ opacity: 0, translateY: -50 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%] mx-auto"
+      >
         Khách hàng nói gì về chúng tôi
-      </h5>
+      </motion.h5>
       <div className="relative">
         <img
           src={bgImg}
@@ -119,7 +155,13 @@ const HomeTestimonial = () => {
           className="absolute left-0 right-0 top-1/2 -translate-y-1/2 w-full"
         />
 
-        <div className="max-w-[50%] mx-auto mt-16">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-[50%] mx-auto mt-16"
+        >
           <Swiper
             slidesPerView={1}
             modules={[Autoplay]}
@@ -154,31 +196,67 @@ const HomeTestimonial = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </motion.div>
 
-        <div className="absolute top-[2%] right-[8%]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.35 }}
+          className="absolute top-[2%] right-[8%]"
+        >
           <TestimonialAvatar size={90} content={contents[3]} />
-        </div>
+        </motion.div>
 
-        <div className="absolute bottom-[8%] right-0">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.32 }}
+          className="absolute bottom-[8%] right-0"
+        >
           <TestimonialAvatar size={100} content={contents[2]} />
-        </div>
+        </motion.div>
 
-        <div className="absolute bottom-[-30%] md:bottom-[-50%] right-[20%]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55 }}
+          className="absolute bottom-[-30%] md:bottom-[-50%] right-[20%]"
+        >
           <TestimonialAvatar size={100} content={contents[4]} />
-        </div>
+        </motion.div>
 
-        <div className="absolute bottom-[-10%] md:bottom-[-30%] left-[20%]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.48 }}
+          className="absolute bottom-[-10%] md:bottom-[-30%] left-[20%]"
+        >
           <TestimonialAvatar size={70} content={contents[5]} />
-        </div>
+        </motion.div>
 
-        <div className="absolute bottom-[24%] left-[0]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.37 }}
+          className="absolute bottom-[24%] left-[0]"
+        >
           <TestimonialAvatar size={65} content={contents[6]} />
-        </div>
+        </motion.div>
 
-        <div className="absolute top-[12%] left-[8%]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.62 }}
+          className="absolute top-[12%] left-[8%]"
+        >
           <TestimonialAvatar size={65} content={contents[1]} />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,22 +1,42 @@
 import { IconCheck } from '@tabler/icons-react';
 import { Button } from '@mantine/core';
 
+import { motion } from 'framer-motion';
+
 const HomeServices = () => {
   return (
     <section
       id="services"
       className="my-36 w-full max-w-[730px] mx-auto text-center px-4 md:px-0 section-margin"
     >
-      <h2 className="bg-primary text-white text-[32px] leading-10 py-1 px-4 font-bold w-fit mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, translateY: -50 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="bg-primary text-white text-[32px] leading-10 py-1 px-4 font-bold w-fit mx-auto"
+      >
         Gói dịch vụ
-      </h2>
-      <p className="text-secondary text-sm text-center mt-6 mb-12 mx-[60px] font-normal">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, translateY: -60 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-secondary text-sm text-center mt-6 mb-12 mx-[60px] font-normal"
+      >
         Bắt đầu miễn phí và mở rộng quy mô trong khi bạn phát triển. Không có
         phí ẩn. Không giới hạn người dùng miễn phí.
-      </p>
+      </motion.p>
 
       <div className="flex w-fit flex-col md:flex-row gap-[30px] items-center">
-        <div className="bg-light py-[26px] px-8 rounded-2xl flex-1 text-left">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5, translateY: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="bg-light py-[26px] px-8 rounded-2xl flex-1 text-left"
+        >
           <h4 className="text-secondary text-2xl font-semibold m-0">Premium</h4>
           <p className="text-secondary text-sm font-normal my-4">
             Keep track of your contacts, gain valuable insights, analyse live
@@ -59,8 +79,14 @@ const HomeServices = () => {
           >
             Get started
           </Button>
-        </div>
-        <div className="flex-1 bg-secondary py-[26px] px-8 rounded-2xl text-left text-white">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.4, translateY: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="flex-1 bg-secondary py-[26px] px-8 rounded-2xl text-left text-white"
+        >
           <h4 className="text-2xl font-semibold m-0">Vip</h4>
           <p className="text-sm font-normal my-4">
             Keep track of your contacts, gain valuable insights, analyse live
@@ -104,7 +130,7 @@ const HomeServices = () => {
           >
             Get started
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

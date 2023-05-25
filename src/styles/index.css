@@ -36,3 +36,29 @@ body {
   );
   border-radius: 11.1944px;
 }
+
+.fade-in-top {
+  opacity: 0;
+  animation: fade-in-top 1s ease-in-out forwards;
+}
+
+.fade-in-top-12s {
+  opacity: 0;
+  animation: fade-in-top 1.2s ease-in-out forwards;
+}
+
+.fade-in-top-15s {
+  opacity: 0;
+  animation: fade-in-top 1.5s ease-in-out forwards;
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

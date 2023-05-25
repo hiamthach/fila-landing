@@ -1,20 +1,40 @@
 import { IconTrendingUp, IconArrowUp } from '@tabler/icons-react';
 
+import { motion } from 'framer-motion';
+
 const HomeAnalysis = () => {
   return (
     <section id="analysis" className="section-margin">
       <div className="container text-center">
-        <h3 className="text-secondary text-3xl md:text-[32px] leading-10">
+        <motion.h3
+          initial={{ opacity: 0, translateY: -50 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-secondary text-3xl md:text-[32px] leading-10"
+        >
           Thông tin nhanh và chính xác
-        </h3>
-        <p className="text-grey text-sm w-full md:w-3/4 mx-auto mt-[10px]">
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, translateY: -30 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-grey text-sm w-full md:w-3/4 mx-auto mt-[10px]"
+        >
           FILA liên tục cập nhật thông tin về chỉ số tài chính, giá cả, tỷ giá
           hối đoái và các thông tin khác cho các sản phẩm tài chính. Nhờ đó,
           người dùng có thể nắm bắt tình hình và ra quyết định đầu tư nhanh
           chóng
-        </p>
+        </motion.p>
         <div className="mx-auto mt-[50px] grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-[46px]">
-          <div className="shadow-default pt-4 pb-3 px-4 rounded-[10px]">
+          <motion.div
+            initial={{ opacity: 0, translateY: 100, scale: 0.5 }}
+            whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="shadow-default pt-4 pb-3 px-4 rounded-[10px]"
+          >
             <h6 className="text-secondary text-sm font-bold mb-7">
               Số mã đã khuyến nghị
             </h6>
@@ -32,8 +52,14 @@ const HomeAnalysis = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="shadow-default pt-4 pb-3 px-4 rounded-[10px]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: 120, scale: 0.5 }}
+            whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="shadow-default pt-4 pb-3 px-4 rounded-[10px]"
+          >
             <h6 className="text-secondary text-sm font-bold mb-7">
               Cổ phiếu có lãi
             </h6>
@@ -58,8 +84,14 @@ const HomeAnalysis = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="shadow-default pt-4 pb-3 px-4 rounded-[10px]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: 140, scale: 0.5 }}
+            whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="shadow-default pt-4 pb-3 px-4 rounded-[10px]"
+          >
             <h6 className="text-secondary text-sm font-bold mb-4">
               Mức lãi toàn bộ danh mục
             </h6>
@@ -103,7 +135,7 @@ const HomeAnalysis = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
