@@ -1,7 +1,7 @@
 import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Popover, Blockquote } from '@mantine/core';
+import { Popover } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import bgImg from '@/assets/imgs/testimonials/background.svg';
 import person1 from '@/assets/imgs/testimonials/person1.jpg';
