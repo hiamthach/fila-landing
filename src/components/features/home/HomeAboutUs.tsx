@@ -75,13 +75,13 @@ const HomeAboutUs = () => {
         </div>
       </div>
 
-      <div className="container my-[60px]">
-        <h6 className="text-primary text-base font-bold mb-7">
+      <div className="container my-8 md:my-[60px]">
+        <h6 className="text-primary text-base font-bold mb-4 md:mb-7">
           Thành lập năm 2020
         </h6>
 
-        <div className="flex gap-12 items-center">
-          <p className="text-xl leading-10 font-bold max-w-[42%]">
+        <div className="flex gap-8 md:gap-12 items-center flex-col md:flex-row">
+          <p className="text-xl leading-10 font-bold w-full md:max-w-[42%]">
             Với tư cách là nhà quản lý đầu tư đa lĩnh vực duy nhất của Việt Nam,
             chúng tôi có vị thế đặc biệt để tạo giá trị và chia sẻ các cơ hội và
             lợi ích từ sự phát triển của đất nước trên các loại tài sản.
@@ -102,21 +102,35 @@ const HomeAboutUs = () => {
         </div>
       </div>
 
-      <div className="w-full bg-primary py-[50px]">
+      <div className="w-full bg-primary py-[50px] section-margin">
         <div className="container">
-          <h4 className="text-2xl font-bold text-center text-white mb-6">
+          <h4 className="text-xl md:text-2xl font-bold text-center text-white mb-6">
             Được hơn 40.000 cá nhân và công ty tin cậy
           </h4>
 
           <Swiper
-            spaceBetween={30}
-            slidesPerView={6}
+            slidesPerView={2}
+            spaceBetween={10}
             loop
             modules={[Autoplay]}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              300: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 30,
+              },
             }}
           >
             {listPartner.map((item, index) => (
@@ -128,15 +142,15 @@ const HomeAboutUs = () => {
         </div>
       </div>
 
-      <div className="container my-[150px]">
+      <div className="container section-margin">
         <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
           tại sao chọn chúng tôi
         </h4>
-        <h5 className="m-0 mb-[30px] text-secondary font-bold text-[26px] leading-8  max-w-[60%]">
+        <h5 className="m-0 mb-[30px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]">
           Hơn 50 triệu khách hàng đã hài lòng về chúng tôi
         </h5>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <div className="flex gap-5 items-center">
               <div className="w-[100px] h-[100px] flex items-center justify-center bg-[#ACE2EB] rounded-[20px]">
@@ -184,7 +198,7 @@ const HomeAboutUs = () => {
             </div>
           </div>
 
-          <div className="relative flex-1 flex items-center justify-center">
+          <div className="relative flex-1 flex items-center justify-center min-h-[360px]">
             <div className="bg-white px-9 py-12 w-fit h-fit text-center shadow-default z-30 rounded-[5px]">
               <h4 className="text-primary text-8xl font-extrabold m-0 mb-3">
                 <CountUp start={0} end={12} duration={8} />

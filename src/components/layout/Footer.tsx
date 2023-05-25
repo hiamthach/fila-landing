@@ -6,32 +6,36 @@ import footerPhone from '@/assets/imgs/footer-phone.svg';
 import footerEmail from '@/assets/imgs/footer-email.svg';
 import footerLocation from '@/assets/imgs/footer-location.svg';
 
-import helpers from '@/config/helpers/general';
-
-const { scrollToSection } = helpers;
+import useLinkNavigate from '@/hooks/useLinkNavigate';
 
 const Footer = () => {
+  const { scrollToSection } = useLinkNavigate();
+
   return (
-    <footer className="w-full py-7 bg-footer text-white">
+    <footer
+      id="footer"
+      className="w-full py-7 bg-footer bg-no-repeat bg-center bg-cover text-white"
+    >
       <div className="container">
-        <div className="flex flex-row w-full gap-10 items-stretch justify-stretch">
-          <div className="w-fit max-w-[27%] h-full self-stretch min-h-[325px] flex flex-col">
+        <div className="flex flex-col sm:flex-row w-full gap-10">
+          <div className="w-full sm:w-fit sm:max-w-[27%] h-full sm:min-h-[325px] flex flex-col">
             <Logo />
-            <p className="text-sm mt-9">
+            <p className="text-sm mt-4 sm:mt-9">
               Lorem ipsum dolor sit amet consectetur. Purus tincidunt viverra
               est adipiscing tortor nunc ipsum ut fusce.
             </p>
 
-            <div className="mt-auto flex gap-2 text-sm font-medium justify-self-end mb-2">
+            <div className="mt-4 flex gap-2 text-sm font-medium justify-self-end mb-2">
               <IconClock size={20} className="text-primary" />
               <span>Mon-Sat</span>
               <span>10.00am-6.00pm</span>
             </div>
           </div>
+
           <div className="w-fit">
             <h4 className="m-0 text-lg">Về chúng tôi</h4>
 
-            <ul className="mt-9 flex flex-col gap-5 list-none p-0">
+            <ul className="mt-4 sm:mt-9 flex flex-col gap-2 sm:gap-5 list-none p-0">
               {[
                 ['Trang chủ', '/'],
                 ['Về chúng tôi', '#about'],
@@ -45,7 +49,10 @@ const Footer = () => {
                   <a
                     className="text-white no-underline text-base"
                     href={href}
-                    onClick={scrollToSection}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(href);
+                    }}
                   >
                     {label}
                   </a>
@@ -54,7 +61,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex-1 pl-5">
+          <div className="flex-1 pl-0 sm:pl-5">
             <h4 className="m-0 text-lg">Yêu cầu tư vấn</h4>
 
             <form name="contact" className="mt-9 flex flex-col gap-[10px]">
@@ -93,19 +100,19 @@ const Footer = () => {
       <div className="my-[30px] bg-divider w-full h-[1px] opacity-25"></div>
 
       <div className="container">
-        <div className="flex w-full gap-[50px]">
-          <div className="bg-[#134952] py-3 px-5 flex gap-5 flex-1">
+        <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-5 lg:gap-[50px]">
+          <div className="bg-[#134952] py-2 lg:py-3 px-2 lg:px-5 flex gap-2 md:gap-5">
             <img src={footerPhone} alt="phone" className="w-12 aspect-square" />
-            <div className="flex flex-col justify-between py-1">
+            <div className="flex flex-col justify-center py-1">
               <h6 className="text-white text-sm font-normal m-0">
                 Điện thoại tư vấn
               </h6>
               <span className="text-sm font-semibold">+880 123 456 789</span>
             </div>
           </div>
-          <div className="bg-[#134952] py-3 px-5 flex gap-5 flex-1">
+          <div className="bg-[#134952] py-2 lg:py-3 px-2 lg:px-5 flex gap-2 md:gap-5">
             <img src={footerEmail} alt="email" className="w-12 aspect-square" />
-            <div className="flex flex-col justify-between py-1">
+            <div className="flex flex-col justify-center py-1">
               <h6 className="text-white text-sm font-normal m-0">
                 Địa chỉ Email
               </h6>
@@ -114,13 +121,13 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="bg-[#134952] py-3 px-5 flex gap-5 flex-1">
+          <div className="bg-[#134952] py-2 lg:py-3 px-2 lg:px-5 flex gap-2 md:gap-5">
             <img
               src={footerLocation}
               alt="location"
               className="w-12 aspect-square"
             />
-            <div className="flex flex-col justify-between py-1">
+            <div className="flex flex-col justify-center py-1">
               <h6 className="text-white text-sm font-normal m-0">Địa điểm</h6>
               <span className="text-sm font-semibold">
                 Binh Thanh, HCM City

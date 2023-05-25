@@ -24,18 +24,18 @@ const HomeInvestment = () => {
   ];
 
   return (
-    <section id="investment" className="mb-[150px]">
+    <section id="investment" className="section-margin">
       <div className="container">
-        <div className="flex gap-8 items-end">
+        <div className="flex gap-8 items-end flex-wrap">
           <div className="flex-1">
             <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
               Xem chúng tôi làm gì
             </h4>
-            <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8  max-w-[60%]">
+            <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%]">
               Trường hợp tư vấn
             </h5>
 
-            <div className="flex gap-10">
+            <div className="flex gap-2 md:gap-10">
               {listTag.map((tag) => (
                 <span
                   key={tag.name}
@@ -56,11 +56,11 @@ const HomeInvestment = () => {
           </button>
         </div>
       </div>
-      <div className="w-full grid grid-cols-4 mt-[30px]">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-[30px]">
         <img
           src={investmentImg1}
           alt=""
-          className="min-h-[400px] w-full object-cover object-center"
+          className="min-h-[400px] h-full w-full object-cover object-center"
         />
 
         <div className="py-8 px-6 bg-light">
@@ -93,7 +93,7 @@ const HomeInvestment = () => {
         <img
           src={investmentImg1}
           alt=""
-          className="min-h-[400px] w-full object-cover object-center"
+          className="min-h-[400px] h-full w-full object-cover object-center"
         />
         <div className="py-8 px-6 bg-light">
           <h6 className="text-lg text-secondary font-bold mb-2">
@@ -152,7 +152,7 @@ const HomeInvestment = () => {
         <img
           src={investmentImg1}
           alt=""
-          className="min-h-[400px] w-full object-cover object-center"
+          className="min-h-[400px] h-full w-full object-cover object-center"
         />
 
         <div className="py-8 px-6 bg-light">
@@ -185,7 +185,7 @@ const HomeInvestment = () => {
         <img
           src={investmentImg1}
           alt=""
-          className="min-h-[400px] w-full object-cover object-center"
+          className="min-h-[400px] h-full w-full object-cover object-center"
         />
       </div>
     </section>

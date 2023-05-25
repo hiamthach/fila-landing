@@ -23,6 +23,9 @@ body {
   .container {
     @apply mx-auto px-4 lg:px-0 w-full max-w-[930px];
   }
+  .section-margin {
+    @apply mb-20 md:mb-[150px];
+  }
 }
 
 .bg-gradient {

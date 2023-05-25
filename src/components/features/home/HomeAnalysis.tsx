@@ -2,18 +2,18 @@ import { IconTrendingUp, IconArrowUp } from '@tabler/icons-react';
 
 const HomeAnalysis = () => {
   return (
-    <section id="analysis" className="my-[150px]">
+    <section id="analysis" className="section-margin">
       <div className="container text-center">
-        <h3 className="text-secondary text-[32px] leading-10">
+        <h3 className="text-secondary text-3xl md:text-[32px] leading-10">
           Thông tin nhanh và chính xác
         </h3>
-        <p className="text-grey text-sm w-3/4 mx-auto mt-[10px]">
+        <p className="text-grey text-sm w-full md:w-3/4 mx-auto mt-[10px]">
           FILA liên tục cập nhật thông tin về chỉ số tài chính, giá cả, tỷ giá
           hối đoái và các thông tin khác cho các sản phẩm tài chính. Nhờ đó,
           người dùng có thể nắm bắt tình hình và ra quyết định đầu tư nhanh
           chóng
         </p>
-        <div className="mx-auto mt-[50px] grid grid-cols-3 gap-[46px]">
+        <div className="mx-auto mt-[50px] grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-[46px]">
           <div className="shadow-default pt-4 pb-3 px-4 rounded-[10px]">
             <h6 className="text-secondary text-sm font-bold mb-7">
               Số mã đã khuyến nghị
@@ -21,7 +21,7 @@ const HomeAnalysis = () => {
 
             <div className="bg-gradient">
               <div className="px-12 py-7">
-                <div className="flex gap-5">
+                <div className="flex gap-5 justify-center">
                   <h4 className="text-[44px] font-bold text-secondary leading-1">
                     452
                   </h4>

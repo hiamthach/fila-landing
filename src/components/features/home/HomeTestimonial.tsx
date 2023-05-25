@@ -105,18 +105,18 @@ const HomeTestimonial = () => {
   ];
 
   return (
-    <section className="container my-[300px] text-center">
+    <section className="container mb-52 md:mb-[300px] text-center">
       <h4 className="m-0 mb-[10px] uppercase text-primary font-bold">
         đánh giá
       </h4>
-      <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 max-w-[60%] mx-auto">
+      <h5 className="m-0 mb-[20px] text-secondary font-bold text-[26px] leading-8 w-full md:max-w-[60%] mx-auto">
         Khách hàng nói gì về chúng tôi
       </h5>
       <div className="relative">
         <img
           src={bgImg}
           alt=""
-          className="absolute left-0 right-0 top-1/2 -translate-y-1/2"
+          className="absolute left-0 right-0 top-1/2 -translate-y-1/2 w-full"
         />
 
         <div className="max-w-[50%] mx-auto mt-16">
@@ -164,11 +164,11 @@ const HomeTestimonial = () => {
           <TestimonialAvatar size={100} content={contents[2]} />
         </div>
 
-        <div className="absolute bottom-[-50%] right-[20%]">
+        <div className="absolute bottom-[-30%] md:bottom-[-50%] right-[20%]">
           <TestimonialAvatar size={100} content={contents[4]} />
         </div>
 
-        <div className="absolute bottom-[-30%] left-[20%]">
+        <div className="absolute bottom-[-10%] md:bottom-[-30%] left-[20%]">
           <TestimonialAvatar size={70} content={contents[5]} />
         </div>
 

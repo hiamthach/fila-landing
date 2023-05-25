@@ -5,7 +5,7 @@ const HomeServices = () => {
   return (
     <section
       id="services"
-      className="my-36 w-full max-w-[730px] mx-auto text-center"
+      className="my-36 w-full max-w-[730px] mx-auto text-center px-4 md:px-0 section-margin"
     >
       <h2 className="bg-primary text-white text-[32px] leading-10 py-1 px-4 font-bold w-fit mx-auto">
         Gói dịch vụ
@@ -15,7 +15,7 @@ const HomeServices = () => {
         phí ẩn. Không giới hạn người dùng miễn phí.
       </p>
 
-      <div className="flex w-fit gap-[30px] items-center">
+      <div className="flex w-fit flex-col md:flex-row gap-[30px] items-center">
         <div className="bg-light py-[26px] px-8 rounded-2xl flex-1 text-left">
           <h4 className="text-secondary text-2xl font-semibold m-0">Premium</h4>
           <p className="text-secondary text-sm font-normal my-4">
