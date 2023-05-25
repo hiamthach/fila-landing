@@ -19,6 +19,7 @@ export default {
       backgroundImage: {
         'home-banner': "url('/src/assets/imgs/banner.png')",
         'footer': "url('/src/assets/imgs/footer-bg.png')",
+        'no-responsible': "url('/src/assets/imgs/no-responsible-bg.svg')",
       },
       container: {
         center: true,
