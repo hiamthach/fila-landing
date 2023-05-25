@@ -12,9 +12,11 @@ import partner5 from '@/assets/imgs/partner5.png';
 import globeVector from '@/assets/imgs/globe-vector.svg';
 import mapBg from '@/assets/imgs/map-bg.svg';
 
-import helpers from '@/config/helpers/general';
-
-const { generateImgPicsum } = helpers;
+import map1Img from '@/assets/imgs/map-about-us/map1.png';
+import map2Img from '@/assets/imgs/map-about-us/map2.png';
+import map3Img from '@/assets/imgs/map-about-us/map3.png';
+import map4Img from '@/assets/imgs/map-about-us/map4.png';
+import map5Img from '@/assets/imgs/map-about-us/map5.png';
 
 const listPartner = [
   {
@@ -215,31 +217,31 @@ const HomeAboutUs = () => {
             />
 
             <img
-              src={generateImgPicsum(84, 63)}
+              src={map3Img}
               alt=""
               className="w-[84px] h-[63px] object-cover object-center z-10 right-[16%] top-0 absolute rounded-md"
             />
 
             <img
-              src={generateImgPicsum(152, 101)}
+              src={map2Img}
               alt=""
               className="w-[152px] h-[101px] object-cover object-center z-10 left-[12%] top-[6%] absolute rounded-md"
             />
 
             <img
-              src={generateImgPicsum(136, 92)}
+              src={map1Img}
               alt=""
               className="w-[136px] h-[92px] object-cover object-center z-10 left-[4%] bottom-[6%] absolute rounded-md"
             />
 
             <img
-              src={generateImgPicsum(136, 92)}
+              src={map4Img}
               alt=""
               className="w-[136px] h-[92px] object-cover object-center z-10 right-[10%] top-[46%] absolute rounded-md"
             />
 
             <img
-              src={generateImgPicsum(127, 84)}
+              src={map5Img}
               alt=""
               className="w-[127px] h-[84px] object-cover object-center left-[42%] bottom-0 absolute rounded-md z-50"
             />

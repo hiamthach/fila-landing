@@ -8,8 +8,19 @@ import footerLocation from '@/assets/imgs/footer-location.svg';
 
 import useLinkNavigate from '@/hooks/useLinkNavigate';
 
+import { useForm } from '@mantine/form';
+
 const Footer = () => {
   const { scrollToSection } = useLinkNavigate();
+
+  const form = useForm({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      problem: '',
+    },
+  });
 
   return (
     <footer
@@ -64,26 +75,34 @@ const Footer = () => {
           <div className="flex-1 pl-0 sm:pl-5">
             <h4 className="m-0 text-lg">Yêu cầu tư vấn</h4>
 
-            <form name="contact" className="mt-9 flex flex-col gap-[10px]">
+            <form
+              name="contact"
+              className="mt-9 flex flex-col gap-[10px]"
+              onSubmit={form.onSubmit((values) => console.log(values))}
+            >
               <input
                 type="text"
                 className="font-medium font-sans text-sm leading-6 bg-transparent border-[#f3f3f3] text-[#6F6F6F] outline-none border-solid text w-full px-3 py-2"
                 placeholder="Tên của bạn"
+                {...form.getInputProps('name')}
               />
               <input
                 type="text"
                 className="font-medium font-sans text-sm leading-6 bg-transparent border-[#f3f3f3] text-[#6F6F6F] outline-none border-solid text w-full px-3 py-2"
                 placeholder="Vấn đề muốn tư vấn"
+                {...form.getInputProps('problem')}
               />
               <input
                 type="email"
                 className="font-medium font-sans text-sm leading-6 bg-transparent border-[#f3f3f3] text-[#6F6F6F] outline-none border-solid text w-full px-3 py-2"
                 placeholder="Email của bạn"
+                {...form.getInputProps('email')}
               />
               <input
                 type="tel"
                 className="font-medium font-sans text-sm leading-6 bg-transparent border-[#f3f3f3] text-[#6F6F6F] outline-none border-solid text w-full px-3 py-2"
                 placeholder="Số điện thoại của bạn"
+                {...form.getInputProps('phone')}
               />
 
               <button
