@@ -32,19 +32,20 @@ const HomeInformation = () => {
       date: '21/05/2023',
     },
     {
-      title: 'Kế hoạch thúc đẩy tăng trưởng kinh tế của Chính phủ Việt Nam',
+      title: 'Không có “Rủi ro ngân hàng thung lũng Silicon” tại Việt Nam',
       date: '21/05/2023',
     },
     {
-      title: 'Kế hoạch thúc đẩy tăng trưởng kinh tế của Chính phủ Việt Nam',
+      title: 'VN-Index khởi đầu năm 2023 thuận lợi',
       date: '21/05/2023',
     },
     {
-      title: 'Kế hoạch thúc đẩy tăng trưởng kinh tế của Chính phủ Việt Nam',
+      title:
+        'Trung Quốc mở cửa trở lại sẽ thúc đẩy nhẹ tăng trưởng GDP của Việt Nam trong năm 2023',
       date: '21/05/2023',
     },
     {
-      title: 'Kế hoạch thúc đẩy tăng trưởng kinh tế của Chính phủ Việt Nam',
+      title: 'Hướng đến 2023',
       date: '21/05/2023',
     },
   ];

@@ -1,14 +1,29 @@
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 
 import { useLocation } from 'react-router-dom';
 
 import HomeBanner from '@/components/features/home/HomeBanner';
 import HomeAboutUs from '@/components/features/home/HomeAboutUs';
-import HomeServices from '@/components/features/home/HomeServices';
-import HomeInvestment from '@/components/features/home/HomeInvestment';
-import HomeAnalysis from '@/components/features/home/HomeAnalysis';
-import HomeInformation from '@/components/features/home/HomeInformation';
-import HomeTestimonial from '@/components/features/home/HomeTestimonial';
+
+const HomeInformation = lazy(
+  () => import('@/components/features/home/HomeInformation')
+);
+
+const HomeServices = lazy(
+  () => import('@/components/features/home/HomeServices')
+);
+
+const HomeInvestment = lazy(
+  () => import('@/components/features/home/HomeInvestment')
+);
+
+const HomeAnalysis = lazy(
+  () => import('@/components/features/home/HomeAnalysis')
+);
+
+const HomeTestimonial = lazy(
+  () => import('@/components/features/home/HomeTestimonial')
+);
 
 const HomePage = () => {
   const location = useLocation();
@@ -31,9 +46,7 @@ const HomePage = () => {
   return (
     <div>
       <HomeBanner />
-      <section id="about">
-        <HomeAboutUs />
-      </section>
+      <HomeAboutUs />
       <HomeServices />
       <HomeInvestment />
       <HomeAnalysis />

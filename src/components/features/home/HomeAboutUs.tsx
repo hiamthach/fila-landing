@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 
 import { useCountUp } from 'react-countup';
 
-import partner1 from '@/assets/imgs/partner1.png';
-import partner2 from '@/assets/imgs/partner2.png';
-import partner3 from '@/assets/imgs/partner3.png';
-import partner4 from '@/assets/imgs/partner4.png';
-import partner5 from '@/assets/imgs/partner5.png';
+import partner1 from '@/assets/imgs/partners/partner1.png';
+import partner2 from '@/assets/imgs/partners/partner2.png';
+import partner3 from '@/assets/imgs/partners/partner3.png';
+import partner4 from '@/assets/imgs/partners/partner4.png';
+import partner5 from '@/assets/imgs/partners/partner5.png';
 
 import globeVector from '@/assets/imgs/globe-vector.svg';
 import mapBg from '@/assets/imgs/map-bg.svg';
@@ -80,7 +80,7 @@ const HomeAboutUs = () => {
   });
 
   return (
-    <>
+    <section id="about">
       <div className="w-full bg-primary py-4">
         <div className="container">
           <h2 className="text-white text-[32px] leading-10 font-bold">
@@ -281,7 +281,7 @@ const HomeAboutUs = () => {
             <img
               src={mapBg}
               alt=""
-              className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="z-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full"
             />
 
             <motion.img
@@ -336,7 +336,7 @@ const HomeAboutUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
