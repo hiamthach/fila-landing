@@ -6,13 +6,10 @@ import footerPhone from '@/assets/imgs/footer-phone.svg';
 import footerEmail from '@/assets/imgs/footer-email.svg';
 import footerLocation from '@/assets/imgs/footer-location.svg';
 
-import useLinkNavigate from '@/hooks/useLinkNavigate';
-
 import { useForm } from '@mantine/form';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const { scrollToSection } = useLinkNavigate();
-
   const form = useForm({
     initialValues: {
       name: '',
@@ -49,24 +46,17 @@ const Footer = () => {
             <ul className="mt-4 sm:mt-9 flex flex-col gap-2 sm:gap-5 list-none p-0">
               {[
                 ['Trang chủ', '/'],
-                ['Về chúng tôi', '#about'],
-                ['Gói dịch vụ', '#services'],
-                ['Quan điểm đầu tư', '#investment'],
-                ['Thông tin & phân tích', '#analysis'],
-                ['Miễn trừ trách nhiệm', '/no-responsible'],
+                ['Về chúng tôi', '/#about'],
+                ['Gói dịch vụ', '/#services'],
+                ['Quan điểm đầu tư', '/#investment'],
+                ['Thông tin phân tích', '/#analysis'],
+                ['Miễn trừ trách nhiệm', 'no-responsible'],
               ].map(([label, href]) => (
                 <li key={label} className="flex items-center gap-3">
                   <span className="text-xs">◆</span>
-                  <a
-                    className="text-white no-underline text-base"
-                    href={href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(href);
-                    }}
-                  >
+                  <Link className="text-white no-underline text-base" to={href}>
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
