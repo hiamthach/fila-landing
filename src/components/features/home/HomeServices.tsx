@@ -39,24 +39,22 @@ const HomeServices = () => {
         >
           <h4 className="text-secondary text-2xl font-semibold m-0">Premium</h4>
           <p className="text-secondary text-sm font-normal my-4">
-            Keep track of your contacts, gain valuable insights, analyse live
-            data and performance metrics.
+            Cung cấp cho người dùng nhiều tính năng hữu ích để giúp họ quản lý
+            đầu tư cổ phiếu của mình một cách hiệu quả hơn
           </p>
           <h3 className="text-secondary text-4xl leading-[1.2] m-0">
-            Free
-            <span className="text-sm font-normal">
-              * No credit card required
-            </span>
+            229.000đ
+            <span className="text-sm font-normal">/tháng</span>
           </h3>
 
           <div className="w-full h-[1px] bg-secondary my-5"></div>
 
           <ul className="flex flex-col gap-2 p-0 mb-12">
             {[
-              'Real-time monitoring',
-              'Track key performance indicators',
-              'Schedule appointments',
-              'Organize, delegate and keep track of tasks',
+              'Không quảng cáo',
+              'Xem được toàn bộ giá trị cổ phiếu',
+              'Không giới hạn trong ngày',
+              'Cập nhật thời gian thực',
             ].map((item, index) => (
               <li
                 key={index}
@@ -77,7 +75,7 @@ const HomeServices = () => {
               height: 'fit-content',
             }}
           >
-            Get started
+            Bắt đầu ngay
           </Button>
         </motion.div>
         <motion.div
@@ -89,25 +87,25 @@ const HomeServices = () => {
         >
           <h4 className="text-2xl font-semibold m-0">Vip</h4>
           <p className="text-sm font-normal my-4">
-            Keep track of your contacts, gain valuable insights, analyse live
-            data and performance metrics.
+            Mang lại giá trị đáng mong đợi. Sự lựa chọn hoàn hảo cho khách hàng
+            muốn sử dụng dịch vụ cao cấp nhất
           </p>
 
           <h3 className="text-4xl leading-[1.2] m-0">
-            $49
-            <span className="text-sm font-normal">/month</span>
+            599.000đ
+            <span className="text-sm font-normal">/tháng</span>
           </h3>
 
           <div className="w-full h-[1px] bg-[#494949] my-5"></div>
 
           <ul className="flex flex-col gap-2 p-0 mb-12">
             {[
-              'Everything from the PREMIUM plan plus',
-              'Data-driven decisions',
-              'Data visualisation',
-              'Schedule appointments',
-              'Store and organise contact information',
-              'Teal-time communication tools for messaging and video conferencing',
+              'Tất cả ưu đãi ở gói Premium',
+              'Thống kê chi tiêu',
+              'Thông báo biến động cổ phiếu',
+              'Phân tích giá trị đầu tư',
+              'Tính toán lợi nhuận',
+              'Hỗ trợ khách hàng 24/7',
             ].map((item, index) => (
               <li
                 key={index}
@@ -128,7 +126,7 @@ const HomeServices = () => {
               height: 'fit-content',
             }}
           >
-            Get started
+            Bắt đầu ngay
           </Button>
         </motion.div>
       </div>

@@ -29,13 +29,12 @@ const Footer = () => {
           <div className="w-full sm:w-fit sm:max-w-[27%] h-full sm:min-h-[325px] flex flex-col">
             <Logo />
             <p className="text-sm mt-4 sm:mt-9">
-              Lorem ipsum dolor sit amet consectetur. Purus tincidunt viverra
-              est adipiscing tortor nunc ipsum ut fusce.
+              Đồng hành cùng bạn trên con đường đầu tư cổ phiếu thành công
             </p>
 
-            <div className="mt-4 flex gap-2 text-sm font-medium justify-self-end mb-2">
+            <div className="mt-4 sm:mt-auto flex gap-2 text-sm font-medium justify-self-end mb-2">
               <IconClock size={20} className="text-primary" />
-              <span>Mon-Sat</span>
+              <span>T2-T7</span>
               <span>10.00am-6.00pm</span>
             </div>
           </div>

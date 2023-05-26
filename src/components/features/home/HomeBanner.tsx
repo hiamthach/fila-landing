@@ -17,7 +17,7 @@ const HomeBanner = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl md:text-5xl font-bold text-center"
       >
-        We bring success to you
+        Chiến lược tài chính thông minh
       </motion.h3>
 
       <motion.p
@@ -27,8 +27,8 @@ const HomeBanner = () => {
         transition={{ duration: 0.6 }}
         className="text-sm font-normal text-center mt-2 md:mt-4  mb-6 md:mb-10 max-w-md"
       >
-        Lorem ipsum dolor sit amet consectetur. Cras iaculis sed morbi et nisl
-        lorem lorem pharetra velit.
+        Đồng hành cùng bạn trên con đường đầu tư cổ phiếu thành công. Khám phá,
+        theo dõi và đầu tư vào cổ phiếu một cách dễ dàng
       </motion.p>
 
       <motion.div
@@ -39,9 +39,9 @@ const HomeBanner = () => {
       >
         <Link
           to={'/#footer'}
-          className="no-underline flex items-center justify-center font-sans outline-none border-none rounded-[28px] bg-white text-black font-bold w-[180px] h-14"
+          className="no-underline flex items-center justify-center font-sans outline-none border-none rounded-[28px] bg-white text-black font-bold w-fit px-6 min-w-[180px] h-14"
         >
-          Contact us
+          Liên hệ với chúng tôi
         </Link>
       </motion.div>
     </section>

@@ -2,11 +2,7 @@ import { useState } from 'react';
 import { clsx, Accordion } from '@mantine/core';
 import { IconPlus } from '@tabler/icons-react';
 
-import helpers from '@/config/helpers/general';
-
 import { motion } from 'framer-motion';
-
-const { generateLoremIpsum } = helpers;
 
 const HomeInformation = () => {
   const [activeTag, setActiveTag] = useState('2023');
@@ -123,7 +119,37 @@ const HomeInformation = () => {
               </h4>
             </Accordion.Control>
 
-            <Accordion.Panel>{generateLoremIpsum(1)}</Accordion.Panel>
+            <Accordion.Panel>
+              <div className="text-secondary text-sm flex flex-col gap-4 font-medium">
+                <p>
+                  Là công ty QLQ có tư cách pháp nhân độc lập, do UBCKNN cấp
+                  phép thành lập & hoạt động để quản lý các quỹ đầu tư chứng
+                  khoán cho NĐT trong nước và quốc tế.
+                </p>
+                <ul className="ml-5">
+                  <li>
+                    <p>
+                      Công ty QLQ hoạt động kinh doanh trên TTCK và chịu sự quản
+                      lý của UBCKNN
+                    </p>
+                  </li>
+                  <li>
+                    <p>Hoạt động kinh doanh của công ty QLQ VinaCapital</p>
+                    <ul className="ml-4 mt-1">
+                      <li>
+                        <p>Thành lập và quản lý quỹ đầu tư chứng khoán</p>
+                      </li>
+                      <li>
+                        <p>Dịch vụ quản lý danh mục đầu tư chứng khoán</p>
+                      </li>
+                      <li>
+                        <p>Tư vấn đầu tư chứng khoán</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item value="q2">
@@ -133,7 +159,46 @@ const HomeInformation = () => {
               </h4>
             </Accordion.Control>
 
-            <Accordion.Panel>{generateLoremIpsum(1)}</Accordion.Panel>
+            <Accordion.Panel>
+              <div className="text-secondary text-sm font-medium">
+                <ul className="ml-5 flex flex-col gap-4">
+                  <li>
+                    <p>
+                      Theo quy định của pháp luật thì công ty QLQ không được cam
+                      kết lợi nhuận đầu tư đối với Quỹ mở. Tuy nhiên NĐT sẽ được
+                      hưởng toàn bộ lợi nhuận đầu tư của quỹ sau khi trừ chi
+                      phí. Các loại phí của Quỹ mở rất nhỏ và giảm dần theo thời
+                      gian.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Theo quy định tại Khoản 4 Điều 22, Thông Tư 98/2020/TT-BTC
+                      về “hướng dẫn hoạt động và quản lý quỹ đầu tư chứng khoán”
+                      do Bộ Tài chính ban hành thì công ty QLQ không được bao
+                      hàm các nhận định khiến NĐT hiểu nhầm là giá trị khoản đầu
+                      tư luôn luôn gia tăng, cam kết hoặc dự báo về kết quả đầu
+                      tư trong tương lai của quỹ.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Lịch sử hoạt động của Quỹ mở tại Việt Nam đến nay cho thấy
+                      NĐT đang đạt được lợi nhuận cao trong trung & dài hạn so
+                      với các kênh truyền thống khác.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Khách hàng đầu tư vào Quỹ mở do VinaCapital quản lý có tài
+                      khoản online VinaCapital MiO có thể theo dõi kết quả đầu
+                      tư của mình mọi lúc mọi nơi và có thể chốt lời/cắt lỗ ở
+                      mức mà mình mong muốn.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </Accordion.Panel>
           </Accordion.Item>
 
           <Accordion.Item value="q3">
@@ -143,7 +208,25 @@ const HomeInformation = () => {
               </h4>
             </Accordion.Control>
 
-            <Accordion.Panel>{generateLoremIpsum(1)}</Accordion.Panel>
+            <Accordion.Panel>
+              <div className="text-secondary text-sm font-medium">
+                <ul className="ml-5 flex flex-col gap-4">
+                  <li>
+                    <p>
+                      Quỹ mở không phân phối lợi nhuận định kỳ cho NĐT, tuy
+                      nhiên toàn bộ lợi nhuận tạo ra của quỹ đã được bao gồm
+                      trong giá CCQ làm cho giá CCQ tăng lên.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      NĐT sẽ nhận được toàn bộ lợi nhuận đầu tư khi bán CCQ để
+                      rút tiền về.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </Accordion.Panel>
           </Accordion.Item>
         </Accordion>
       </motion.section>

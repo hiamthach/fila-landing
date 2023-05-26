@@ -205,8 +205,8 @@ const HomeAboutUs = () => {
                     Hỗ trợ khách hàng toàn cầu
                   </h6>
                   <p className="m-0 text-secondary text-sm font-normal mt-2">
-                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
-                    massa aliquam egestas lorem sem.
+                    Đối tác tài chính của bạn trên mọi chặn đường. Cung cấp dịch
+                    vụ hỗ trợ tài chính chất lượng cao cho khách hàng toàn cầu
                   </p>
                 </div>
               </div>
@@ -227,8 +227,8 @@ const HomeAboutUs = () => {
                     Hơn 300 nhân viên có kinh nghiệm cao
                   </h6>
                   <p className="m-0 text-secondary text-sm font-normal mt-2">
-                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
-                    massa aliquam egestas lorem sem.
+                    Nhân viên tư vấn được đào tạo chuyên nghiệp, luôn luôn trực
+                    tuyến tư vấn cho khách hàng
                   </p>
                 </div>
               </div>
@@ -247,11 +247,11 @@ const HomeAboutUs = () => {
                 </div>
                 <div className="flex-1">
                   <h6 className="m-0 text-secondary text-base font-semibold">
-                    Hơn 300 nhân viên có kinh nghiệm cao
+                    Cập nhật thông tin chứng khoán liên tục
                   </h6>
                   <p className="m-0 text-secondary text-sm font-normal mt-2">
-                    Lorem ipsum dolor sit amet consectetur. Augue vestibulum
-                    massa aliquam egestas lorem sem.
+                    Thông tin chứng khoán luôn cập nhật nhanh, chính xác theo
+                    thời gian thật
                   </p>
                 </div>
               </div>

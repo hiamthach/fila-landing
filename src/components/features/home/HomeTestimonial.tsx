@@ -73,23 +73,23 @@ const HomeTestimonial = () => {
     {
       avatar: person1,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 5,
-      name: 'Tom Raido',
-      position: 'IT Manager',
+      name: 'Trí Nguyễn',
+      position: 'Thiết kế',
     },
     {
       avatar: person2,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 4,
-      name: 'John Doe',
+      name: 'Hoàng Nguyễn',
       position: 'Developer',
     },
     {
       avatar: person3,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 5,
       name: 'Kate Winslet',
       position: 'Designer',
@@ -97,7 +97,7 @@ const HomeTestimonial = () => {
     {
       avatar: person4,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 4,
       name: 'Taylor Swift',
       position: 'Singer',
@@ -105,7 +105,7 @@ const HomeTestimonial = () => {
     {
       avatar: person5,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 4,
       name: 'John Doe',
       position: 'Developer',
@@ -113,7 +113,7 @@ const HomeTestimonial = () => {
     {
       avatar: person6,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 5,
       name: 'Kate Winslet',
       position: 'Designer',
@@ -121,7 +121,7 @@ const HomeTestimonial = () => {
     {
       avatar: person7,
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget augue nec massa volutpat aliquam fringilla non.',
+        'Thông tin cập nhật liên tục, giúp tôi lựa chọn cổ phiếu phù hợp và giúp tôi lời khuyên về đầu tư.',
       rate: 4,
       name: 'Taylor Swift',
       position: 'Singer',

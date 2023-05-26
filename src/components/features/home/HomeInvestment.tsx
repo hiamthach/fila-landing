@@ -117,7 +117,7 @@ const HomeInvestment = () => {
 
           <span className="text-[#6f6f6f] text-sm font-medium">Ngày</span>
           <p className="text-secondary font-semibold text-sm mb-4">
-            26/12/2022
+            30/12/2022
           </p>
 
           <span className="text-[#6f6f6f] text-sm font-medium">Lĩnh vực</span>
